@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.clientevuelo.clientevueloapp.ClienteVueloController">
+   <children>
+      <SplitPane dividerPositions="0.6532846715328468" orientation="VERTICAL" prefHeight="550.0" prefWidth="750.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="123.0" text="Informacion Cliente " />
+                  <Separator layoutX="6.0" layoutY="42.0" prefHeight="0.0" prefWidth="742.0" />
+                  <Separator layoutX="362.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="232.0" prefWidth="11.0" />
+                  <Label layoutX="373.0" layoutY="14.0" prefHeight="17.0" prefWidth="151.0" text="Informacion Vuelo" />
+                  <Label layoutX="15.0" layoutY="87.0" prefHeight="17.0" prefWidth="61.0" text="Nombre" />
+                  <Label layoutX="15.0" layoutY="125.0" prefHeight="17.0" prefWidth="61.0" text="Apellido" />
+                  <Label layoutX="15.0" layoutY="161.0" prefHeight="17.0" prefWidth="61.0" text="Cedula" />
+                  <Label layoutX="15.0" layoutY="200.0" text="Telefono" />
+                  <TextField fx:id="txtNombre" layoutX="116.0" layoutY="83.0" />
+                  <TextField fx:id="txtApellido" layoutX="116.0" layoutY="121.0" />
+                  <TextField fx:id="txtCedula" layoutX="116.0" layoutY="157.0" />
+                  <TextField fx:id="txtTelefono" layoutX="116.0" layoutY="196.0" />
+                  <Label layoutX="378.0" layoutY="88.0" prefHeight="17.0" prefWidth="61.0" text="Origen" />
+                  <Label layoutX="378.0" layoutY="125.0" prefHeight="17.0" prefWidth="61.0" text="Destino" />
+                  <Label layoutX="373.0" layoutY="161.0" prefHeight="17.0" prefWidth="61.0" text="Fecha ida" />
+                  <Label layoutX="373.0" layoutY="200.0" prefHeight="17.0" prefWidth="71.0" text="Fecha vuelta" />
+                  <TextField fx:id="txtOrigen" layoutX="450.0" layoutY="84.0" prefHeight="25.0" prefWidth="174.0" />
+                  <TextField fx:id="txtDestino" layoutX="450.0" layoutY="121.0" prefHeight="25.0" prefWidth="174.0" />
+                  <DatePicker fx:id="dateFrom" layoutX="450.0" layoutY="157.0" />
+                  <DatePicker fx:id="dateTo" layoutX="450.0" layoutY="196.0" />
+                  <Label layoutX="15.0" layoutY="242.0" prefHeight="17.0" prefWidth="71.0" text="Tipo vuelo" />
+                  <Separator layoutY="230.0" prefHeight="3.0" prefWidth="750.0" />
+                  <RadioButton fx:id="rbPrimeraClase" layoutX="16.0" layoutY="283.0" mnemonicParsing="false" text="Primera Clase">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tipovuelo" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rbPremium" layoutX="137.0" layoutY="283.0" mnemonicParsing="false" text="Premium" toggleGroup="$tipovuelo" />
+                  <RadioButton fx:id="rbComercial" layoutX="234.0" layoutY="283.0" mnemonicParsing="false" text="Comercial" toggleGroup="$tipovuelo" />
+                  <Button layoutX="292.0" layoutY="316.0" mnemonicParsing="false" onAction="#onGuardar" text="Guardar" />
+                  <Button layoutX="387.0" layoutY="316.0" mnemonicParsing="false" onAction="#onCancelar" text="Cancelar" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TextArea fx:id="informacion" editable="false" layoutX="20.0" layoutY="16.0" prefHeight="156.0" prefWidth="713.0" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
